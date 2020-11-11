@@ -1,4 +1,6 @@
-## Marketcircle Specific
+======================
+ Marketcircle Specific
+======================
 
 This service runs in Kubernetes, and forwards messages into Kafka, which is then consumed by Graylog.  The IMAP account is hosted out of Rackspace, and has everything disabled except IMAP.
 
