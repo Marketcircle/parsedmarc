@@ -1,3 +1,17 @@
+## Marketcircle Specific
+
+This service runs in Kubernetes, and forwards messages into Kafka, which is then consumed by Graylog.  The IMAP account is hosted out of Rackspace, and has everything disabled except IMAP.
+
+We store the .ini file as a secret in K8s.  The configuration is not really secret since the IMAP account just holds dmarc reports
+and does not have the ability to send emails, but does still contain the username and password for the account.
+
+```
+kubectl create secret generic parsedmarc-ini --from-file=./parsedmarc.ini -n parsedmarc
+```
+
+
+
+
 ==========
 parsedmarc
 ==========
